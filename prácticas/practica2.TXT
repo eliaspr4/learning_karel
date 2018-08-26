@@ -1,0 +1,179 @@
+                 class program {
+void unPasoAlFrente(){
+    move();
+    }
+void cincoPasosAlFrente(){
+    iterate(5){
+    move();
+    }
+}
+
+void girarIzquierda(){
+    iterate(3){
+    turnleft();
+    }
+}
+
+void girar(){
+    turnleft();
+}
+
+void girarHaciaArriba(){
+    iterate(3){
+    turnleft();
+    }
+}
+
+void girarHaciaAbajo(){
+     turnleft();
+}
+
+void moverDerecha(){
+    iterate(3){
+    turnleft();
+    }
+}
+
+void cogerBeeper(){
+   if (nextToABeeper){
+    iterate(9){
+    pickbeeper();
+    }
+    }
+}
+
+program () {
+  while (frontIsClear){
+  unPasoAlFrente();
+  }
+  while(frontIsBlocked) {
+  moverDerecha();
+  }
+
+if (frontIsClear) {
+  iterate(7){
+  unPasoAlFrente();
+  }
+  if (rightIsBlocked) {
+  girar();
+  move();
+  cogerBeeper();
+}
+
+if (anyBeepersInBeeperBag){
+   move();
+if (frontIsBlocked) {
+ girar();
+ iterate(4){
+ unPasoAlFrente();
+ cogerBeeper();
+if (frontIsBlocked){
+ girarHaciaAbajo();
+ move();
+if (frontIsBlocked){
+    moverDerecha();
+    iterate(3){
+    unPasoAlFrente();
+    }
+if (frontIsBlocked){
+    girarHaciaArriba();
+    unPasoAlFrente();
+    cogerBeeper();
+    iterate(2){
+    unPasoAlFrente();
+}
+   }
+if (frontIsBlocked){
+       moverDerecha();
+       cincoPasosAlFrente();
+       iterate(3){
+       unPasoAlFrente();
+       cogerBeeper();
+     }
+if (anyBeepersInBeeperBag) {
+     girar();
+     iterate(2){
+     unPasoAlFrente();
+if (frontIsBlocked) {
+    girar();
+    iterate(2){
+    move();
+    cogerBeeper();
+ }
+if  (anyBeepersInBeeperBag) {
+    girarHaciaArriba();
+    move();
+    moverDerecha();
+    iterate(4){
+    unPasoAlFrente();
+    }
+if (frontIsBlocked || facingSouth) {
+    girar();
+    unPasoAlFrente();
+    cogerBeeper();
+    girar();
+    cincoPasosAlFrente();
+    cogerBeeper();
+    girarHaciaAbajo();
+    iterate(2){
+    unPasoAlFrente();
+    }
+if (frontIsBlocked){
+     girarIzquierda();
+     iterate(2){
+     unPasoAlFrente();
+     cogerBeeper();
+     }
+  if (anyBeepersInBeeperBag && frontIsBlocked) {
+       girarHaciaAbajo();
+       unPasoAlFrente();
+       girarIzquierda();
+     }
+     unPasoAlFrente();
+     if (leftIsBlocked){
+     girarHaciaArriba();
+     unPasoAlFrente();
+     if(frontIsBlocked) {
+     girar();
+     unPasoAlFrente();
+       }
+if (anyBeepersInBeeperBag && frontIsBlocked) {
+     girarHaciaAbajo();
+     unPasoAlFrente();
+     }
+ if (facingNorth || frontIsBlocked){
+     girarIzquierda();
+     unPasoAlFrente();
+         }
+ if(frontIsBlocked && anyBeepersInBeeperBag){
+      girarHaciaArriba();
+      unPasoAlFrente();
+      cogerBeeper();
+      turnoff();
+      }
+      }
+      }
+     }
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+ }
+}
+}
+}
+}
+  }
+
+
+
+
+
+
+
+
+
+
