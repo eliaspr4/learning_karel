@@ -1,0 +1,95 @@
+                   class program {
+void moverFrente(){
+    iterate(3){
+    move();
+    }
+}
+void moverAbajo(){
+    iterate(7){
+    turnleft();
+    }
+}
+
+void moverIzquierda(){
+    iterate(3){
+    turnleft();
+    }
+}
+
+void moverDerecha(){
+    turnleft();
+}
+
+void cogerBeeper(){
+   if (nextToABeeper){
+    iterate(9){
+    pickbeeper();
+    }
+    }
+}
+
+program () {
+    if (facingNorth && frontIsClear) {
+         moverFrente();
+    }
+
+    if (nextToABeeper) {
+        cogerBeeper();
+        moverFrente();
+        move();
+        cogerBeeper();
+        moverFrente();
+        move();
+        cogerBeeper();
+        moverFrente();
+        move();
+        cogerBeeper();
+    }
+
+    if (anyBeepersInBeeperBag) {
+        moverIzquierda();
+   }
+    if (facingEast && anyBeepersInBeeperBag) {
+       moverFrente();
+       move();
+       move();
+       cogerBeeper();
+       iterate(6){
+       move();
+       }
+       cogerBeeper();
+       moverFrente();
+       iterate(2){
+       move();
+       cogerBeeper();
+       }
+       moverAbajo();
+    }
+    if (facingSouth && anyBeepersInBeeperBag){
+       moverFrente();
+       iterate(2) {
+       move();
+       }
+       cogerBeeper();
+       moverDerecha();
+    }
+    if (facingEast &&  anyBeepersInBeeperBag){
+        moverFrente();
+        iterate(2) {
+        move();
+        cogerBeeper();
+}
+turnoff();
+ }
+ }
+ }
+
+
+
+
+
+
+
+
+
+
