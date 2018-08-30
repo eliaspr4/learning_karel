@@ -1,0 +1,182 @@
+                 class program {
+void unPasoAlFrente(){
+    if(facingNorth && frontIsClear){
+    move();
+   }
+   if(nextToABeeper){
+   cogerZumbador();
+   }
+   if(anyBeepersInBeeperBag){
+   move();
+   }
+ }
+
+void unPasoDerecha(){
+   if(facingEast && frontIsClear){
+   iterate(4){
+   move();
+}
+}
+}
+
+void unPasoAbajo(){
+   if(facingSouth && frontIsClear){
+   move();
+   if(frontIsBlocked){
+   iterate(3){
+   turnleft();
+   }
+   }
+  }
+}
+
+void girarDerecha(){
+   if(frontIsBlocked){
+   iterate(3){
+   turnleft();
+}
+}
+   }
+
+  void girarIzquierda(){
+   if(facingNorth && frontIsBlocked){
+   turnleft();
+}
+}
+
+void avanzarIzquierda(){
+   if (facingWest && frontIsClear){
+   iterate(3){
+   move();
+}
+ if(frontIsBlocked){
+   iterate(3){
+   turnleft();
+}
+}
+}
+}
+
+void girarHaciaArriba(){
+    iterate(3){
+    turnleft();
+    }
+}
+
+void cogerZumbador(){
+   if (nextToABeeper){
+    iterate(9){
+    pickbeeper();
+    }
+    }
+}
+
+void evitarEsquinaNorte() {
+ while (facingEast && frontIsBlocked){
+       iterate(5){
+       turnleft();
+   }
+ }
+ }
+
+ void evitarMuroIzquierdo() {
+ while (facingWest && frontIsBlocked){
+       iterate(5){
+       turnleft();
+   }
+ }
+ }
+
+ program () {
+      unPasoAlFrente();
+      girarDerecha();
+      unPasoDerecha();
+      iterate(3){
+      move();
+      }
+      evitarEsquinaNorte();
+      unPasoAlFrente();
+      girarIzquierda();
+      avanzarIzquierda();
+      unPasoAlFrente();
+      cogerZumbador();
+      evitarMuroIzquierdo();
+      unPasoAbajo();
+      avanzarIzquierda();
+      unPasoAlFrente();
+      move();
+      girarDerecha();
+      iterate(5){
+      unPasoDerecha();
+      }
+      cogerZumbador();
+      evitarEsquinaNorte();
+      unPasoAlFrente();
+      girarIzquierda();
+      iterate(2){
+      move();
+      }
+      cogerZumbador();
+      iterate(3){
+      turnleft();
+       }
+      move();
+      girarDerecha();
+      unPasoDerecha();
+      evitarEsquinaNorte();
+      move();
+      girarIzquierda();
+      avanzarIzquierda();
+      iterate(2){
+      move();
+      }
+      cogerZumbador();
+      turnleft();
+      unPasoAbajo();
+      move();
+      iterate(3){
+      turnleft();
+      }
+      unPasoAlFrente();
+      move();
+      cogerZumbador();
+      turnleft();
+      unPasoAbajo();
+      unPasoAlFrente();
+      girarHaciaArriba();
+      move();
+      girarIzquierda();
+      move();
+      turnleft();
+      move();
+      iterate(3){
+      turnleft();
+      }
+      move();
+       iterate(3){
+      turnleft();
+      }
+      move();
+      cogerZumbador();
+
+
+
+
+
+
+
+
+   }
+       }
+     }
+
+
+
+
+
+
+
+
+
+
+
