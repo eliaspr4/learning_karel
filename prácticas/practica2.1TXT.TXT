@@ -158,15 +158,7 @@ void evitarEsquinaNorte() {
       }
       move();
       cogerZumbador();
-
-
-
-
-
-
-
-
-   }
+  }
        }
      }
 
