@@ -1,0 +1,175 @@
+        class program {
+
+  define buscarZumbadores(){
+  while(nextToABeeper && facingNorth){
+       tomarZumbadores();
+  }
+  while(nextToABeeper && facingSouth){
+      tomarZumbadores();
+  }
+
+ while (facingNorth && anyBeepersInBeeperBag){
+   iterate(3){
+   turnleft();
+              }
+  }
+
+  while (facingSouth && anyBeepersInBeeperBag){
+   iterate(5){
+   turnleft();
+              }
+  }
+
+  while (nextToABeeper && facingWest) {
+  tomarZumbadores();
+     iterate(3){
+     turnleft();
+  }
+ }
+
+  while (nextToABeeper && facingEast) {
+  tomarZumbadores();
+ }
+  }
+
+  define tomarZumbadores(){
+  while (nextToABeeper) {
+      iterate(9){
+      pickbeeper();
+   }
+  }
+  }
+
+define moverAlFrente(){
+  while (facingNorth && noBeepersInBeeperBag){
+      move();
+      buscarZumbadores();
+  }
+ }
+
+  define moverADerecha() {
+  if (facingEast){
+      iterate(8){
+      move();
+      }
+       buscarZumbadores();
+ }
+  }
+
+   define moverHaciaAbajo(){
+  if (facingSouth){
+      iterate(4){
+      move();
+      }
+       buscarZumbadores();
+       }
+    }
+
+     define moverAIzquierda(){
+  if (facingWest){
+      iterate(4){
+      move();
+      }
+       buscarZumbadores();
+}
+  }
+
+     program() {
+       moverAlFrente();
+       moverADerecha();
+       while(facingEast){
+        iterate(3){
+        turnleft();
+       }
+       }
+       moverHaciaAbajo();
+       if(facingEast){
+        iterate(2){
+        turnleft();
+       }
+       }
+       moverAIzquierda();
+       moverAlFrente();
+       if(facingNorth){
+        buscarZumbadores();
+        }
+       if(facingEast){
+        iterate(5){
+         turnleft();
+        }
+        }
+        if (facingNorth){
+        iterate(8){
+         move();
+        }
+        }
+        buscarZumbadores();
+        moverADerecha();
+        move();
+        buscarZumbadores();
+        moverHaciaAbajo();
+        if(facingEast){
+        iterate(3){
+        turnleft();
+        }
+        }
+        if (facingSouth){
+        moverHaciaAbajo();
+       }
+       moverADerecha();
+       if(facingEast){
+        iterate(3){
+        turnleft();
+        }
+        }
+        if(facingSouth){
+        iterate(3){
+        move();
+        }
+        }
+        iterate(3){
+        turnleft();
+                   }
+            move();
+        buscarZumbadores();
+        if(facingNorth){
+         iterate(5){
+          turnleft();
+         }
+        }
+        iterate(3){
+        moverAIzquierda();
+            }
+         iterate(3){
+         move();
+         }
+         buscarZumbadores();
+         iterate(2){
+          move();
+         }
+         if (facingNorth){
+         iterate(3){
+         turnleft();
+              }
+              }
+          move();
+          move();
+          buscarZumbadores();
+          if(facingEast){
+          iterate(5){
+          turnleft();
+           }
+        }
+        iterate(6){
+        move();
+        }
+        move();
+        buscarZumbadores();
+        moverADerecha();
+        iterate(5){
+        move();
+         }
+        buscarZumbadores();
+         }
+         }
+
