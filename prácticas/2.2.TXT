@@ -1,0 +1,184 @@
+                 class program {
+ define derecha(){
+  iterate(3){
+  turnleft();
+ }
+    }
+  define izquierda(){
+    turnleft();
+  }
+    define tomarZumbadores(){
+   while (nextToABeeper){
+      iterate(9){
+      pickbeeper();
+      }
+  }
+  }
+program () {
+    while(frontIsClear && facingNorth) {
+      move();
+       }
+     if(frontIsBlocked){
+      derecha();
+          }
+      while(frontIsClear && facingEast) {
+        move();
+       }
+      if(frontIsBlocked){
+       turnleft();
+      }
+      while(facingNorth && frontIsClear){
+        move();
+        tomarZumbadores();
+      }
+      if(frontIsBlocked && facingNorth){
+         izquierda();
+      }
+      while(frontIsClear && facingWest){
+         move();
+         tomarZumbadores();
+      }
+      if (!(leftIsClear && notFacingWest)){
+        izquierda();
+          }
+      while(facingSouth && frontIsClear){
+        move();
+      }
+      if(frontIsBlocked && facingSouth){
+        iterate(3){
+        izquierda();
+        }
+        }
+       while(facingWest && frontIsClear){
+        move();
+          }
+       if(facingWest && leftIsBlocked){
+           iterate(3){
+           izquierda();
+         }
+         }
+       while (facingNorth && frontIsClear){
+        move();
+        tomarZumbadores();
+       }
+       if(facingNorth && frontIsBlocked){
+            derecha();
+       }
+       while(facingEast && frontIsClear){
+           move();
+           tomarZumbadores();
+                }
+      if(rightIsBlocked && facingEast){
+            turnleft();
+      }
+     while(frontIsClear){
+         move();
+       }
+     if(frontIsBlocked){
+           turnleft();
+       }
+     while(facingWest && frontIsClear){
+         move();
+         tomarZumbadores();
+ }
+ if (facingWest && frontIsBlocked){
+       iterate(3){
+        izquierda();
+       }
+        }
+    while(facingNorth && frontIsClear) {
+        move();
+    }
+    if(frontIsBlocked && facingNorth) {
+    derecha();
+         }
+    while (facingEast && frontIsClear){
+      move();
+    }
+    if(rightIsBlocked){
+      turnleft();
+    }
+    while(facingNorth && frontIsClear){
+      move();
+      tomarZumbadores();
+      izquierda();
+    }
+    while(facingWest && frontIsClear) {
+       move();
+       tomarZumbadores();
+    }
+    if(facingWest) {
+       izquierda();
+    }
+    while(facingSouth && frontIsClear){
+      move();
+    }
+    if(frontIsBlocked){
+       iterate(3){
+        izquierda();
+       }
+    }
+    while(facingWest && frontIsClear){
+           move();
+           tomarZumbadores();
+         }
+    if(!(notFacingWest && leftIsClear)){
+           izquierda();
+       }
+    while(facingSouth && frontIsClear){
+       move();
+    }
+    if(facingSouth && frontIsBlocked){
+     iterate(3){
+     izquierda();
+     }
+     }
+    while(facingWest && frontIsClear){
+      move();
+    }
+    if(!(leftIsClear && notFacingWest)) {
+      derecha();
+    }
+    while(frontIsClear && facingNorth) {
+      move();
+    }
+    if(frontIsBlocked){
+     izquierda();
+    }
+     while(facingWest && frontIsClear){
+      move();
+    }
+     if(frontIsBlocked){
+     izquierda();
+    }
+    while(frontIsClear && facingSouth) {
+      move();
+    }
+     if(frontIsBlocked && facingSouth){
+     iterate(3){
+     izquierda();
+        }
+    }
+    while(frontIsClear && facingWest){
+      move();
+    }
+    if(leftIsBlocked){
+      derecha();
+    }
+    while(frontIsClear){
+      move();
+      tomarZumbadores();
+    }
+          }
+          }
+
+
+
+
+
+
+
+
+
+
+
