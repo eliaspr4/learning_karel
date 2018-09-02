@@ -1,0 +1,261 @@
+                 class program {
+ define derecha(){
+  iterate(3){
+  turnleft();
+ }
+    }
+  define izquierda(){
+    turnleft();
+  }
+  define tomarZumbadores(){
+   while (nextToABeeper){
+      iterate(9){
+      pickbeeper();
+      }
+  }
+  }
+ define avanzaAlNorte(){
+while(facingNorth && frontIsClear){
+    move();
+    tomarZumbadores();
+   }
+      if (facingNorth && frontIsBlocked){
+   derecha();
+}
+    if(facingNorth || frontIsBlocked){
+     izquierda();
+    }
+      }
+define avanzaDerecha(){
+     while(frontIsClear && facingEast) {
+        move();
+       }
+     if(facingEast && frontIsBlocked){
+      izquierda();
+     }
+     tomarZumbadores();
+     }
+define avanzaIzquierda(){
+     if (facingNorth && frontIsBlocked){
+       izquierda();
+     }
+     while(facingWest && frontIsClear) {
+        move();
+        tomarZumbadores();
+
+     }
+      if (!(leftIsClear && notFacingWest)){
+        izquierda();
+  }
+     if(facingSouth && frontIsBlocked){
+     iterate(2){
+     izquierda();
+     }
+}
+}
+define avanzaHaciaAbajo(){
+     while(facingSouth && frontIsClear){
+        move();
+      }
+      if(frontIsBlocked && facingSouth){
+        iterate(3){
+        izquierda();
+        }
+        }
+}
+program () {
+           iterate(2){
+       avanzaAlNorte();
+       avanzaDerecha();
+          }
+iterate(2){
+avanzaIzquierda();
+avanzaHaciaAbajo();
+}
+     iterate(3){
+        avanzaAlNorte();
+        avanzaDerecha();
+        avanzaIzquierda();
+}
+    avanzaAlNorte();
+avanzaIzquierda();
+avanzaHaciaAbajo();
+avanzaIzquierda();
+avanzaHaciaAbajo();
+avanzaAlNorte();
+avanzaIzquierda();
+avanzaAlNorte();
+ avanzaIzquierda();
+  avanzaHaciaAbajo();
+  avanzaIzquierda();
+  avanzaAlNorte();
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
